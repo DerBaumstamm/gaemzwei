@@ -55,5 +55,6 @@ public class movement : MonoBehaviour
         yield return new WaitForSeconds(1);
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         transform.position = Vector3.zero;
+#sehr wichtig für schulinternet
     }
 }

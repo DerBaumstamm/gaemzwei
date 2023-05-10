@@ -4,25 +4,41 @@ using UnityEngine;
 
 public class boardMovement : MonoBehaviour
 {
-    private float movementSpeed = 5f;
-    // Start is called before the first frame update
+    private float rotationX = 0f;
+    private float rotationY = 0f;
+    private float rotationZ = 0f;
+    private float rotationLimit = 15;
+    private float rotationSpeed = 0.2f;
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //get the Input from Horizontal axis
-        float horizontalInput = Input.GetAxis("Horizontal");
-        //get the Input from Vertical axis
-        float verticalInput = Input.GetAxis("Vertical");
+        if (Input.GetKey(KeyCode.W) && rotationX <= rotationLimit)
+        {
+            rotationX += rotationSpeed;
+            transform.rotation = Quaternion.Euler(rotationX, rotationY, rotationZ);
+        }
 
-        //update the position
-        transform.position = transform.position + new Vector3(horizontalInput * movementSpeed * Time.deltaTime, verticalInput * movementSpeed * Time.deltaTime, 0);
+        if (Input.GetKey(KeyCode.S) && rotationX >= -rotationLimit)
+        {
+            rotationX += -rotationSpeed;
+            transform.rotation = Quaternion.Euler(rotationX, rotationY, rotationZ);
+        }
 
-        //output to log the position change
-        Debug.Log(transform.position);
+        if (Input.GetKey(KeyCode.A) && rotationZ <= rotationLimit)
+        {
+            rotationZ += rotationSpeed;
+            transform.rotation = Quaternion.Euler(rotationX, rotationY, rotationZ);
+        }
+
+        if (Input.GetKey(KeyCode.D) && rotationZ >= -rotationLimit)
+        {
+            rotationZ += -rotationSpeed;
+            transform.rotation = Quaternion.Euler(rotationX, rotationY, rotationZ);
+        }
     }
 }

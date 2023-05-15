@@ -8,7 +8,7 @@ public class boardMovement : MonoBehaviour
     private float rotationY = 0f;
     private float rotationZ = 0f;
     private float rotationLimit = 15;
-    private float rotationSpeed = 0.2f;
+    private float rotationSpeed = 0.75f;
 
     void Start()
     {

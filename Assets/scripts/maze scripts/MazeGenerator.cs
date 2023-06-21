@@ -6,6 +6,7 @@ using System;
 [Flags]
 public enum WallState
 {
+    // test
     // 0000 -> NO WALLS
     // 1111 -> LEFT,RIGHT,UP,DOWN
     LEFT = 1, // 0001

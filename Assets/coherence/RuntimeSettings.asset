@@ -32,3 +32,4 @@ MonoBehaviour:
   projectID: 
   projectName: 
   playApiEndpoint: https://api.prod.coherence.io/v1/play
+  webSocketEndpoint: wss://api.prod.coherence.io/v1/play/ws

@@ -20,7 +20,6 @@ public class CameraMovement : MonoBehaviour
     }
     void LateUpdate()
     {
-        //transform.position = ball.transform.position + offset;
         moveX = Mathf.Lerp(transform.position.x, ball.transform.position.x + offset.x, cameraSpeed * Time.deltaTime);
         moveY = Mathf.Lerp(transform.position.y, ball.transform.position.y + offset.y, cameraSpeed * Time.deltaTime);
         moveZ = Mathf.Lerp(transform.position.z, ball.transform.position.z + offset.z, cameraSpeed * Time.deltaTime);

@@ -20,7 +20,6 @@ public class BoardMovement : MonoBehaviour
 
     void Update()
     {        
-        //rotationZ = Input.GetAxis("Horizontal");;
         rotationX = Mathf.Lerp(rotationX, Input.GetAxis("Vertical") * rotationLimit, rotationSpeed * Time.deltaTime);
         rotationZ = Mathf.Lerp(rotationZ, Input.GetAxis("Horizontal") * rotationLimit, rotationSpeed * Time.deltaTime);
         rb.MoveRotation(Quaternion.Euler(rotationX , 0, -rotationZ));

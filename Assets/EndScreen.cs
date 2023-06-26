@@ -20,6 +20,6 @@ public class EndScreen : MonoBehaviour
 
     private void printTime()
     {
-        timeText.text = Timer.Instance.getTime().ToString("0.00");
+        timeText.text = "Your Score: " + Timer.Instance.getTime().ToString("0.00");
     }
 }

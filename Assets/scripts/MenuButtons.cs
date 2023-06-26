@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    public void loadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
-    public void QuitButton()
+    public void quitButton()
     {
         Application.Quit();
     }
 
-    public void BackToMenu(string sceneName)
+    public void backToMenu(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
